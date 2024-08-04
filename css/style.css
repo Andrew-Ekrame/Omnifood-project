@@ -5,16 +5,21 @@
 
 -font weights:
 default:400
+medium:500
+semi bold:600
+bold:700
 
 -line heights:
 default:1
+small:1.05
+paragraph default:1.6
 
 ---2-colors
 primary:#e67e22
 
-tints:#fdf2e9,##cf711f
+tints:#fdf2e9
 
-shades:
+shades:##cf711f
 
 accents:
 
@@ -23,7 +28,9 @@ greys:
 
 ---3-shadows
 
+
 ---4-border radius
+default:9px
 
 ---5-whitespace
 -SPACING SYSTEM (px)
@@ -43,18 +50,9 @@ body {
   font-weight: 400;
   color: #555;
 }
-.section-hero {
-  background-color: #fdf2e9;
-  padding: 9.6rem 0;
-}
-.hero {
-  max-width: 130rem;
-  margin: 0 auto;
-  display: grid;
-  gap: 9.6rem;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-}
+/*******************************************/
+/* General components */
+/*******************************************/
 .heading-primary {
   font-size: 5.2rem;
   font-weight: 700;
@@ -62,11 +60,6 @@ body {
   letter-spacing: -1px;
   color: #333;
   margin-bottom: 3.2rem;
-}
-.hero-description {
-  font-size: 2rem;
-  line-height: 1.6;
-  margin-bottom: 4.8rem;
 }
 .btn:link,
 .btn:visited {
@@ -96,6 +89,78 @@ body {
 .btn--outline:active {
   background-color: #fdf2e9;
   box-shadow: 0 0 0 3px #fff inset;
+}
+.margin-right-sm {
+  margin-right: 1.6rem;
+}
+/*******************************************/
+/* Header */
+/*******************************************/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fdf2e9;
+  height: 9.6rem;
+  padding: 0 4.8rem;
+}
+.logo {
+  height: 2.2rem;
+}
+/*******************************************/
+/* Navigation */
+/*******************************************/
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all 0.3s ease-in-out;
+}
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #cf711f;
+}
+/* An and selector to make sure nothing goes wrong */
+.main-nav-link.nav-cta:link,
+.nav-cta:visited {
+  color: #fff;
+  padding: 1.2rem 2.4rem;
+  background-color: #e67e22;
+  border-radius: 9px;
+}
+.nav-cta:hover,
+.nav-cta:active {
+  background-color: #cf711f;
+}
+/*******************************************/
+/*  Hero section */
+/*******************************************/
+.section-hero {
+  background-color: #fdf2e9;
+  padding: 4.8rem 0 9.6rem 0;
+}
+.hero {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+  display: grid;
+  gap: 9.6rem;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.hero-description {
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 4.8rem;
 }
 .hero-img {
   width: 100%;
@@ -128,9 +193,5 @@ body {
 .delivered-text span {
   color: #cf711f;
   font-weight: 700;
-}
-/* utility classes */
-.margin-right-sm {
-  margin-right: 1.6rem;
 }
 /* v108 */
