@@ -34,7 +34,7 @@ greys:
 
 
 ---4-border radius
-default:9px
+default:9px,11px
 
 ---5-whitespace
 -SPACING SYSTEM (px)
@@ -117,8 +117,25 @@ body {
   background-color: #fdf2e9;
   box-shadow: 0 0 0 3px #fff inset;
 }
+.link:link,
+.link:visited {
+  color: #e67e22;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  display: inline-block;
+  padding-bottom: 0.2rem;
+  transition: all 0.3s ease-in-out;
+}
+.link:hover,
+.link:active {
+  color: #cf711f;
+  border-bottom: 1px solid transparent;
+}
 .margin-right-sm {
-  margin-right: 1.6rem;
+  margin-right: 1.6rem !important;
+}
+.margin-bottom-md {
+  margin-bottom: 4.8rem !important;
 }
 .container {
   max-width: 120rem;
@@ -141,4 +158,10 @@ body {
 }
 .grid-4-cols {
   grid-template-columns: repeat(4, 1fr);
+}
+strong {
+  font-weight: 500;
+}
+.center-text {
+  text-align: center;
 }
