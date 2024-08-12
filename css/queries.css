@@ -1,8 +1,8 @@
 /* 
 Breakpoints
-1-1344px/16=84em
-2-1200px/16=75em
-3-
+1-1344px/16=84em small desktop
+2-1200px/16=75em landscape tablets
+3-944px/16=59em tablets
 */
 @media (max-width: 84em) {
   .hero {
@@ -41,6 +41,52 @@ Breakpoints
   }
   .testimonials-container {
     padding: 9.6rem 3.2rem;
+  }
+}
+@media (max-width: 59em) {
+  html {
+    font-size: 50%;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 0 8rem;
+    gap: 6.4rem;
+  }
+  .hero-img-box,
+  .hero-text-box {
+    text-align: center;
+  }
+
+  .delivered-meals {
+    justify-content: center;
+    margin-top: 3.2rem;
+  }
+  .hero-img {
+    width: 60%;
+  }
+  .logos img {
+    height: 2.4rem;
+  }
+  .step-number {
+    font-size: 7.4rem;
+  }
+  .meal-content {
+    padding: 2.4rem 3.2rem 3.2rem 3.2rem;
+  }
+  .section-testimonials {
+    grid-template-columns: 1fr;
+  }
+  .gallery {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .cta {
+    grid-template-columns: 6fr 4fr;
+  }
+  .cta-form {
+    grid-template-columns: 1fr;
+  }
+  .btn-form {
+    margin-top: 1.2rem;
   }
 }
 /*
