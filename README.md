@@ -2,6 +2,8 @@
 
 ## The final project in the html,css course from Jonas Schmedtmann
 
+### Live preview : https://omnifood-website-project.vercel.app/
+
 ### Project is divided into:
 
 1. Desktop version
