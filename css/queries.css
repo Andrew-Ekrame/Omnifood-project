@@ -92,6 +92,7 @@ Breakpoints
   }
   .btn-mobile-nav {
     display: block;
+    z-index: 99;
   }
   .nav-open .main-nav {
     opacity: 1;
