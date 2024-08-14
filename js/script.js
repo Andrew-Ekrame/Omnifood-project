@@ -4,13 +4,13 @@ const current_year = new Date();
 const year_element = document.querySelector(".year");
 year_element.textContent = current_year.getFullYear();
 
-// Making mobile navigation functional
+// Making mobile navigation functional and closes when a nav link is clicked
 
-const mobile_btn = document.querySelector(".btn-mobile-nav");
-mobile_btn.addEventListener("click", function () {
-  const header = document.querySelector(".header");
-  const body = document.querySelector("body");
-  const html = document.querySelector("html");
+const mobileBtn = document.querySelector(".btn-mobile-nav");
+const header = document.querySelector(".header");
+const body = document.querySelector("body");
+const html = document.querySelector("html");
+mobileBtn.addEventListener("click", function () {
   if (header.classList.contains("nav-open")) {
     header.classList.remove("nav-open");
     body.style.overflowY = "auto";
@@ -20,6 +20,34 @@ mobile_btn.addEventListener("click", function () {
     body.style.overflowY = "hidden";
     html.style.overflowY = "hidden";
   }
+});
+
+const navLinks = document.querySelectorAll(".main-nav-link");
+for (var i = 0; i < navLinks.length; i++) {
+  navLinks[i].addEventListener("click", function () {
+    if (header.classList.contains("nav-open")) {
+      header.classList.remove("nav-open");
+      body.style.overflowY = "auto";
+      html.style.overflowY = "auto";
+    }
+  });
+}
+
+// solution of scroll problem in safari
+
+const allLinks = document.querySelectorAll("a:link");
+allLinks.forEach(function (link) {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+    const href = link.getAttribute("href");
+    if (href === "#") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+    if (href !== "#" && href.startsWith("#")) {
+      const section = document.querySelector(href);
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  });
 });
 
 ///////////////////////////////////////////////////////////
